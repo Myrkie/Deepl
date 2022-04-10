@@ -1,4 +1,6 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
+using System.Threading;
 using DeeplTranslator = Deepl.Deepl; 
 using Language = Deepl.Deepl.Language;
 
@@ -14,7 +16,7 @@ class Program
     
     private static string TranslateText(string input)
     {
-        var translate = new DeeplTranslator(selectedLanguage: Language.JP, targetLanguage: Language.EN, input,"1231232313", new NetworkCredential("nfbnwiiu", "oa2ev6ilh71n"));
+        var translate = new DeeplTranslator(selectedLanguage: Language.JP, targetLanguage: Language.EN, input,"1111", new NetworkCredential("1111", "1111"));
         if (string.IsNullOrEmpty(translate.Resp)) return $"{input} \nThis Failed To translate";
         return translate.Resp;
     }
